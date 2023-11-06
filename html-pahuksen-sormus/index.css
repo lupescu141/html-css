@@ -9,10 +9,24 @@ background-color: #00000052;
 
 html, body {
   margin: 0;
-  background-image: url(./index-background.jpg);
+  background-image: url(./images/index-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   font-size: 1em;
+  height: auto;
+}
+
+.class-name{
+  font-size: 2rem;
+  text-align: center;
+}
+
+.class-img-txt{
+  font-size: 1.2rem;
+}
+
+.class-txt{
+  font-size: 1.5rem;
 }
 
 * {
@@ -25,19 +39,17 @@ html, body {
   }
 
 .flex-container {
-    display: flex;
-    justify-content: space-evenly;
-    width: 95vw;
+  display: flex;
+  justify-content: space-around;
+  width: 95vw;
   }
 
   .flex-item {
-    border: solid 2px black;
     padding: 10px;
     border: solid 2px black;
     padding: 10px;
-    margin-left: 2.5vw;
-    margin-right: 2.5vw;
     margin-bottom: 2.5rem;
+    width: 30vw;
   }
 
   .class-box-img{
@@ -58,7 +70,8 @@ html, body {
   box-shadow: 0.1vw 0.3vw 0.5vw -0.15vw;
   color: #000000;
   font-size: 3.5em;
-  background-image: url("index-nav-background.jpg");
+  background-image: url("./images/index-nav-background.jpg");
+  z-index: 2;
 }
 
 .li-margin{
@@ -130,6 +143,46 @@ html, body {
     width: 100vw;
 }
 
+.contact-header{
+  font-size: 3rem;
+}
+
+.contact-txt{
+  font-size: 1.5rem;
+}
+
+.contact-box{
+  display: flex;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-top: 3rem;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 3rem;
+}
+
+.google-map {
+  padding-bottom: 40vw;
+  width: 40vw;
+  position: relative;
+  box-shadow: 1rem 1rem 1.5rem -0.5rem;
+  border-radius: 5%;
+  background-image: url(index-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+.google-map iframe {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  border-radius: 5%;
+  opacity: 0.4;
+  filter: grayscale(90%) ;
+}
 
 #menu-toggle:checked + .menu-button-container .menu-button::before {
   margin-top: 0px;
@@ -214,6 +267,22 @@ a{
 }
 
 @media (max-width: 913px) {
+
+    .flex-item{
+      width: 95vw;
+    }
+
+    .google-map{
+      padding-bottom: 20rem;
+      width: 80vw;
+    }
+
+    .contact-box{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      flex-direction: column;
+    }
     
     .contact-banner-img {
         height: 60vw;
@@ -270,7 +339,7 @@ a{
     padding: 0.5em 0;
     width: 100%;
     color: white;
-    background-image: url("./index-nav-background.jpg");
+    background-image: url("./images/index-nav-background.jpg");
   }
   .menu > li:not(:last-child) {
     border-bottom: 1px solid #444;
